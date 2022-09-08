@@ -787,5 +787,15 @@
 		<string name="restore_with_pattern1">ROM 中的 图案密码 已启用</string>
 		<string name="restore_with_pattern2">恢复前应该在 ROM 中禁用 图案密码</string>
 		<string name="reboot_after_restore">建议在 Android 首次启动后再重启一次。</string>
+
+		<string name="force_install_payload">强制安装Payload格式的ROM！</string>
+		<string name="force_install_payload_success_msg">强制安装Payload格式的ROM成功！</string>
+		<string name="force_install_payload_ab_fail">检测到AB升级失败，正在强制安装</string>
+		<!--
+ 		<string name="force_install_payload_creat_superfile">创建super分区镜像文件</string>
+		<string name="force_install_payload_flash_partition">正在刷写 {1} 分区</string>
+		<string name="force_install_payload_current_slot">当前活动的槽位为：{1}</string>
+
+		-->
 	</resources>
 </language>

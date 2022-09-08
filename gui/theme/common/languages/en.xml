@@ -793,5 +793,15 @@
 		<string name="restore_with_pattern1">Pattern is enabled</string>
 		<string name="restore_with_pattern2">Pattern should be disabled before restore</string>
 		<string name="reboot_after_restore">It is recommended to reboot Android once after first boot.</string>
+
+<string name="force_install_payload">Force install Payload format ROM to slot A and set A as active slot! </string>
+<string name="force_install_payload_success_msg">Forced installation of ROM in Payload format succeeded! </string>
+<string name="force_install_payload_ab_fail">AB upgrade failed detected, forcing installation ...</string>
+<!--
+<string name="force_install_payload_creat_superfile">Create super partition image file</string>
+<string name="force_install_payload_flash_partition">Flashing {1} partition</string>
+<string name="force_install_payload_current_slot">The currently active slot is: {1}</string>
+-->
+
 	</resources>
 </language>

@@ -2152,6 +2152,11 @@
 
 			<listbox style="scrolllist">
 				<placement x="%col1_x_left%" y="%row2_header_y%" w="%content_width%" h="%partitionlist_wipe_height%"/>
+
+				<listitem name="{@force_install_payload=Force install stock payload rom}">
+					<data variable="tw_force_install_payload"/>
+				</listitem>
+
 				<listitem name="{@enable_backup_comp_chk=Enable compression}">
 					<data variable="tw_use_compression"/>
 				</listitem>

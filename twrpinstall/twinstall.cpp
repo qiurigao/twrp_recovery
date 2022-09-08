@@ -324,6 +324,18 @@ int TWinstall_zip(const char* path, int* wipe_cache, bool check_for_digest) {
 	} else {
 		std::string ab_binary_name(AB_OTA);
 		ZipEntry64 ab_binary_entry;
+
+//如果AB升级，并且选中强制刷入payload则自动强刷
+	if (DataManager::GetIntValue(TW_FORCE_INSTALL_PAYLOAD_VAR) == 1 &&FindEntry(Zip, ab_binary_name, &ab_binary_entry) == 0 ) {
+		int TWinstall_zip(const char* path);
+		gui_msg(Msg(msg::kHighlight, "force_install_payload=Force install Payload format ROM to slot A and set A as active slot! ..."));
+		string Filename = path;
+		TWFunc::Exec_Cmd("flashbin.sh " "\"" + Filename + """\"" );
+		gui_msg(Msg(msg::kHighlight, "force_install_payload_success_msg=Forced installation of ROM in Payload format succeeded!"));
+	}
+
+	else {
+
 		if (FindEntry(Zip, ab_binary_name, &ab_binary_entry) == 0) {
 			LOGINFO("AB zip\n");
 			gui_msg(Msg(msg::kHighlight, "flash_ab_inactive=Flashing A/B zip to inactive slot: {1}")(PartitionManager.Get_Active_Slot_Display()=="A"?"B":"A"));
@@ -369,6 +381,7 @@ int TWinstall_zip(const char* path, int* wipe_cache, bool check_for_digest) {
 		gui_err("invalid_zip_format=Invalid zip file format!");
 	} else {
 		LOGINFO("Install took %i second(s).\n", total_time);
+	  }
 	}
 	return ret_val;
 }

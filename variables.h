@@ -148,6 +148,8 @@
 #define TW_UNMOUNT_SYSTEM           "tw_unmount_system"
 #define TW_IS_SUPER                 "tw_is_super"
 #define TW_AUTO_REFLASHTWRP_VAR     "tw_auto_reflashtwrp"
+//关联主题
+#define TW_FORCE_INSTALL_PAYLOAD_VAR "tw_force_install_payload"
 
 // Theme versioning
 // version 2 requires theme to handle power button as action togglebacklight
